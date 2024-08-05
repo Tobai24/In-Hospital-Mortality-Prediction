@@ -31,19 +31,23 @@ The dataset used for this project is named "In-Hospital-Mortality-Prediction." I
 14. outcome: Target variable indicating the outcome (0 for survived, 1 for mortality).
 
 ## Tools & Technologies
-- Cloud: Google Cloud SDK
-- Virtual Machine: Google Compute Engine
-- Containerization: Docker and Docker Compose
-- Orchestration: Mage
-- Experiment Tracking and Model Management: MLflow
-- Model Artifacts Storage: Google Cloud Storage
-- Streaming Model Deployment: Google Cloud Functions
-- Container Storage: Google Container Registry
-- Model Monitoring: Evidently AI and Grafana
-- Language: Python
+- **Cloud:** [Google Cloud SDK](https://cloud.google.com/sdk)
+- **Virtual Machine:** [Google Compute Engine](https://cloud.google.com/compute)
+- **Containerization:** [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)
+- **Orchestration:** [Mage](https://mage.ai/)
+- **Experiment Tracking and Model Management:** [MLflow](https://mlflow.org/)
+- **Model Artifacts Storage:** [Google Cloud Storage](https://cloud.google.com/storage)
+- **Streaming Model Deployment:** [Google Cloud Functions](https://cloud.google.com/functions)
+- **Container Storage:** [Google Container Registry](https://cloud.google.com/container-registry)
+- **Model Monitoring:** [Evidently AI](https://evidently.ai/) and [Grafana](https://grafana.com/)
+- **Language:** [Python](https://www.python.org/)
+- **Web Application Framework:** [Streamlit](https://streamlit.io/)
+
+**Warning:** Following the steps of what's in here may cost you money (Google Cloud is a paid service), be sure to shut down any Google Cloud service you no longer need to use to avoid charges.
 
 ### Architecture
 The architecture of the project is designed to ensure seamless integration and automation of various components, from data ingestion to model deployment and monitoring. The diagram below illustrates the overall architecture:
+
 ![architecture](images/architecture.png)
 
 
@@ -51,4 +55,8 @@ The architecture of the project is designed to ensure seamless integration and a
 The exploratory data analysis and modeling is done in the notebooks directory. The exploratory data analysis is done in the analysis.ipynb notebook. The modeling is done in the modeling.ipynb notebook.
 
 ### Setup
-WARNING: You will be charged for all the infra setup. You can try free trials or 12 months free tier on Google Cloud.
+**Warning (again):** Using Google Cloud services costs money. If you don't have credits (you get $300USD when you first sign up), you will be charged. Delete and shutdown your work when finished to avoid charges.
+
+### Pre-requisites
+If you already have a Goggle Cloud account, you can skip the pre-requisite steps.
+- - Google Cloud: [Google Cloud Account and Access Setup](setup/1_google_cloud.md)
