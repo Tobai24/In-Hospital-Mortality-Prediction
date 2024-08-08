@@ -4,6 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+mlflow = "*"
+jupyter = "*"
+scikit-learn = "*"
+pandas = "*"
+seaborn = "*"
+hyperopt = "*"
+xgboost = "*"
+boto3 = "*"
+fastparquet = "*"
 
 [dev-packages]
 
