@@ -13,6 +13,8 @@ hyperopt = "*"
 xgboost = "*"
 boto3 = "*"
 fastparquet = "*"
+botocore = "*"
+mage-ai = "*"
 
 [dev-packages]
 
