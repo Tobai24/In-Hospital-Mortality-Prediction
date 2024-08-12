@@ -1,0 +1,66 @@
+from sklearn.pr
+
+if 'transformer' not in globals():
+    from mage_ai.data_preparation.decorators import transformer
+if 'test' not in globals():
+    from mage_ai.data_preparation.decorators import test
+
+
+@transformer
+def transform(df, *args, **kwargs):
+    """
+    Template code for a transformer block.
+
+    Add more parameters to this function if this block has multiple parent blocks.
+    There should be one parameter for each output variable from each parent block.
+
+    Args:
+        data: The output from the upstream parent block
+        args: The output from any additional upstream blocks (if applicable)
+
+    Returns:
+        Anything (e.g. data frame, dictionary, array, int, str, etc.)
+    """
+    # Specify your transformation logic here
+    df = df.copy()
+    # Since this is for practice i would reduce the number of columns 
+    df = df[['age', 'BMI', 'atrialfibrillation', 'Systolic blood pressure', 'Diastolic blood pressure', 'diabetes',
+             'Respiratory rate', 'temperature', 'SP O2', 'Urine output', 'PT', 'INR', 'Anion gap', 'PCO2', 'PH', 'Bicarbonate',
+             'NT-proBNP', 'Creatine kinase', 'Creatinine', 'Urea nitrogen', 'outcome']]
+    
+    # Create a new feature 'Hypertensive'
+    df['Hypertensive'] = (df['Systolic blood pressure'] >= 140) | (df['Diastolic blood pressure'] >= 90)
+    
+    # Interaction feature
+    df['age_BMI'] = df['age'] * df['BMI']
+    
+    # Categorical binning
+    age_bins = [0, 30, 60, 100]
+    age_labels = ['young', 'middle-aged', 'elderly']
+    df['age_group'] = pd.cut(df['age'], bins=age_bins, labels=age_labels)
+    
+    bmi_bins = [0, 18.5, 24.9, 29.9, np.inf]
+    bmi_labels = ['underweight', 'normal', 'overweight', 'obese']
+    df['BMI_category'] = pd.cut(df['BMI'], bins=bmi_bins, labels=bmi_labels)
+
+    # Log transformations
+    df['Creatine kinase_log'] = np.log1p(df['Creatine kinase'])
+    
+    # One-hot encoding
+    df = pd.get_dummies(df, columns=['atrialfibrillation', 'diabetes', 'age_group', 'BMI_category'], drop_first=True)
+    
+    # Scaling
+    scaler = StandardScaler()
+    df[['age', 'BMI', 'Systolic blood pressure', 'Diastolic blood pressure', 'Respiratory rate', 'temperature', 'SP O2', 'Urine output', 'INR', 'PH', 'Bicarbonate', 'NT-proBNP', 'Creatine kinase', 'Urea nitrogen']] = scaler.fit_transform(df[['age', 'BMI', 'Systolic blood pressure', 'Diastolic blood pressure', 'Respiratory rate', 'temperature', 'SP O2', 'Urine output', 'INR', 'PH', 'Bicarbonate', 'NT-proBNP', 'Creatine kinase', 'Urea nitrogen']])
+
+    df = df.dropna(subset=['outcome'])
+    
+    return df
+
+
+@test
+def test_output(output, *args) -> None:
+    """
+    Template code for testing the output of the block.
+    """
+    assert output is not None, 'The output is undefined'
