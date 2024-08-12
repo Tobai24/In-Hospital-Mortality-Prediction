@@ -22,7 +22,8 @@ blocks:
   configuration:
     file_source:
       path: project/transformers/data_transformation.py
-  downstream_blocks: []
+  downstream_blocks:
+  - experiment_tracking
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -35,6 +36,43 @@ blocks:
   upstream_blocks:
   - data_loader
   uuid: data_transformation
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: project/transformers/experiment_tracking.py
+  downstream_blocks:
+  - data_exporter
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: experiment_tracking
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - data_transformation
+  uuid: experiment_tracking
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: project/data_exporters/data_exporter.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: data_exporter
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - experiment_tracking
+  uuid: data_exporter
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}

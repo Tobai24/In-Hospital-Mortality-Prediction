@@ -1,0 +1,85 @@
+blocks:
+  beaming_prophecy:
+    name: beaming prophecy
+    type: chart
+    uuid: beaming_prophecy
+  original_grace:
+    name: original grace
+    type: chart
+    uuid: original_grace
+  pipeline_run_status_project_pipeline_l9:
+    configuration:
+      chart_style: horizontal
+      chart_type: bar chart
+      group_by:
+      - status
+      metrics:
+      - aggregation: count_distinct
+        column: id
+      y_sort_order: descending
+    data_source:
+      pipeline_uuid: project_pipeline
+      type: pipeline_runs
+    name: Pipeline run status
+    type: chart
+    uuid: pipeline_run_status_project_pipeline_l9
+  pipeline_runs_daily_project_pipeline_a6:
+    configuration:
+      chart_type: time series line chart
+      group_by:
+      - execution_date
+      metrics:
+      - aggregation: count_distinct
+        column: id
+      time_interval: day
+    data_source:
+      pipeline_uuid: project_pipeline
+      type: pipeline_runs
+    name: Pipeline runs daily
+    type: chart
+    uuid: pipeline_runs_daily_project_pipeline_a6
+  trigger_active_status_project_pipeline_u4:
+    configuration:
+      chart_type: bar chart
+      group_by:
+      - status
+      metrics:
+      - aggregation: count_distinct
+        column: id
+      y_sort_order: descending
+    data_source:
+      pipeline_uuid: project_pipeline
+      type: pipeline_schedules
+    name: Trigger active status
+    type: chart
+    uuid: trigger_active_status_project_pipeline_u4
+  trigger_types_project_pipeline_c2:
+    configuration:
+      chart_type: pie chart
+      group_by:
+      - schedule_type
+    data_source:
+      pipeline_uuid: project_pipeline
+      type: pipeline_schedules
+    name: Trigger types
+    type: chart
+    uuid: trigger_types_project_pipeline_c2
+  wizardly_echo:
+    name: wizardly echo
+    type: chart
+    uuid: wizardly_echo
+layout:
+- - block_uuid: trigger_active_status_project_pipeline_u4
+    width: 1
+  - block_uuid: trigger_types_project_pipeline_c2
+    width: 1
+  - block_uuid: pipeline_run_status_project_pipeline_l9
+    width: 1
+- - block_uuid: pipeline_runs_daily_project_pipeline_a6
+    width: 2
+- - block_uuid: wizardly_echo
+    width: 1
+- - block_uuid: original_grace
+    width: 1
+- - block_uuid: beaming_prophecy
+    width: 1
