@@ -60,3 +60,9 @@ The exploratory data analysis and modeling is done in the notebooks directory. T
 ### Pre-requisites
 If you already have a Goggle Cloud account, you can skip the pre-requisite steps.
 - - Google Cloud: [Google Cloud Account and Access Setup](setup/1_google_cloud.md)
+
+
+```bash
+docker build -t mortality-prediction:v1 .
+docker run -it -p 9696:9696 mortality-prediction:v1
+```

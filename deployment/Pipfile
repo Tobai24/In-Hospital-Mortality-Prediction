@@ -4,19 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-mlflow = "*"
-jupyter = "*"
 scikit-learn = "==1.5.1"
-pandas = "*"
-seaborn = "*"
-hyperopt = "*"
-xgboost = "*"
-boto3 = "*"
-fastparquet = "*"
-botocore = "*"
-mage-ai = "*"
+flask = "*"
 gunicorn = "*"
-numpy = "*"
+pandas = "*"
+
 
 [dev-packages]
 requests = "*"
