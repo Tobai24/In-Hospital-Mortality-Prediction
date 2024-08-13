@@ -17,6 +17,7 @@ botocore = "*"
 mage-ai = "*"
 gunicorn = "*"
 numpy = "*"
+streamlit = "*"
 
 [dev-packages]
 requests = "*"

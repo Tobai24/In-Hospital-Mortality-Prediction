@@ -3,7 +3,7 @@ import pandas as pd
 from flask import Flask, request, jsonify # type: ignore
 
 
-with open("save_model.pkl", "rb") as f_in:
+with open("model.pkl", "rb") as f_in:
     model = pickle.load(f_in)
     
 def predict(features):
