@@ -5,6 +5,8 @@ __pycache__/
 
 # C extensions
 *.so
+*.json
+*.key
 
 # Distribution / packaging
 .Python
@@ -54,6 +56,7 @@ cover/
 # Translations
 *.mo
 *.pot
+myenv/
 
 # Django stuff:
 *.log

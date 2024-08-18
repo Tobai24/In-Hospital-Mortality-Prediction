@@ -61,8 +61,19 @@ The exploratory data analysis and modeling is done in the notebooks directory. T
 If you already have a Goggle Cloud account, you can skip the pre-requisite steps.
 - - Google Cloud: [Google Cloud Account and Access Setup](setup/1_google_cloud.md)
 
-
+# to use the local docker deployment
 ```bash
 docker build -t mortality-prediction:v1 .
 docker run -it -p 9696:9696 mortality-prediction:v1
+```
+
+# to check the local streamlit deployment
+```bash
+docker build -t streamlit-app .
+docker run -p 8501:8501 streamlit-app
+```
+
+# to run the the stramlit app from the cloud
+```bash
+streamlit run app.py --server.port 8501 --server.enableCORS false --server.enableXsrfProtection false
 ```
