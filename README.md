@@ -77,3 +77,5 @@ docker run -p 8501:8501 streamlit-app
 ```bash
 streamlit run app.py --server.port 8501 --server.enableCORS false --server.enableXsrfProtection false
 ```
+
+include other things
