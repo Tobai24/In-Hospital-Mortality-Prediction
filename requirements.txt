@@ -1,0 +1,28 @@
+# Main dependencies
+mlflow
+jupyter
+scikit-learn
+pandas
+seaborn
+hyperopt
+xgboost
+boto3
+fastparquet
+botocore
+mage-ai
+gunicorn
+numpy
+streamlit
+prefect
+tqdm
+requests
+joblib
+pyarrow
+psycopg
+psycopg-binary
+evidently
+matplotlib
+
+# Development dependencies
+requests
+ipykernel
