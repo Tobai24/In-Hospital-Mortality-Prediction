@@ -30,6 +30,7 @@ matplotlib = "*"
 
 [dev-packages]
 requests = "*"
+ipykernel = "*"
 
 [requires]
 python_version = "3.12"
