@@ -35,9 +35,9 @@ Before we go on pls edit the Dockerfile to this, it won't be in this format beca
 ```
 
 1. **Build the Docker Image:**
-   - Navigate to the `deployment/web-deployment` directory in your terminal:
+   - Navigate to the `deployment/web_deployment` directory in your terminal:
      ```bash
-     cd deployment/web-deployment
+     cd deployment/web_deployment
      ```
 
    - Build your Docker image using the following command:
@@ -213,11 +213,11 @@ we had to change it in order to run the streamlit locally.
 
     WORKDIR /app
 
-    COPY deployment/web-deployment/requirements.txt ./
+    COPY deployment/web_deployment/requirements.txt ./
 
     RUN pip install --no-cache-dir -r requirements.txt
 
-    COPY deployment/web-deployment/app.py deployment/web-deployment/model.pkl ./
+    COPY deployment/web_deployment/app.py deployment/web_deployment/model.pkl ./
 
     EXPOSE 8501
 
