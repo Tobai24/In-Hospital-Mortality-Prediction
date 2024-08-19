@@ -6,6 +6,8 @@ Ready to get your model up and running locally? Follow these easy steps:
 
    If you haven’t set up a Pipenv environment yet, you can do so by running:
 
+   If you have already actiavted the pipenv/virtual environment as in the Setup you can skip this step
+
    ```bash
    pip install pipenv
    ```

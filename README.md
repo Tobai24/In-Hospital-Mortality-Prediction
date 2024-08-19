@@ -2,13 +2,13 @@
 
 Hey there! 👋 Welcome to my machine learning project, where I’m working on something super important—predicting in-hospital mortality. The whole idea is to create a reproducible pipeline, so whether you’re running it on your laptop or in the cloud, you can easily follow along and get the same results. ✨
 
-I’ve pulled together medical data and built a system that turns it into life-saving predictions. To make it all happen, I’m using a mix of awesome tools like MLflow, Mage, Docker, Google Cloud, Evidently AI, and Grafana. 
+I’ve pulled together medical data and built an end to end machine learning project. To make it all happen, I’m using tools like MLflow, Mage, Docker, Google Cloud, Evidently AI, Grafana etc. 
 
 The goal? Make sure everything is running smoothly, scalable, and—most importantly—reproducible. Ultimately, it’s about giving healthcare professionals the insights they need to help their patients in the best possible way.
 
 ## 📝 Problem Description
 
-Hospital readmissions and mortality are pressing challenges in healthcare today. The ability to predict in-hospital mortality can be crucial for better patient management and improving outcomes.
+Hospital mortality are pressing challenges in healthcare today. The ability to predict in-hospital mortality can be crucial for better patient management and improving outcomes.
 
 ### Objective
 
@@ -56,7 +56,7 @@ You can check out the live version of the Streamlit app at the following URL:
 
 ### Exploratory Data Analysis and Modeling 
 
-The exploratory data analysis and modeling are done in the [notebooks directory](notebook/). The exploratory data analysis and baseline model building are done in the `analysis.ipynb` notebook. The notebook directory also contains a model directory called `model`, where the baseline model is stored.
+The exploratory data analysis and modeling are done in the [notebooks directory](notebook/). The exploratory data analysis and baseline model building are done in the `analysis.ipynb` notebook. The `experiment.ipynb` is where I practiced the experiment tracking before I integrated it with the mage pipeline. The notebook directory also contains a model directory called `model`, where the baseline model is stored.
 
 ## Setup
 **Warning (again):** Using Google Cloud services costs money. If you don't have credits (you get $300USD when you first sign up), you will be charged. Delete and shutdown your work when finished to avoid charges.
@@ -148,6 +148,8 @@ Ready to dive into your project? Here’s a quick guide to get you started. Each
 
 - **Tools Used**: Google Cloud Platform (GCP) for hosting your app and Streamlit for the web interface.
 - **Where to Find It**: Navigate to the [deployment/web_deployment](deployment/web_deployment) folder. The README guides you through deploying your app to GCP using Streamlit. It’s perfect for getting your app live on the cloud.
+
+It also include steps to for continuous deployment with gitHub Actions
 
 ### 📁 **Monitoring**
 
