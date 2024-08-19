@@ -44,11 +44,15 @@ For more detailed information about the dataset, including explanations of the c
 
 **Warning:** Following the steps of what's in here may cost you money (Google Cloud is a paid service), be sure to shut down any Google Cloud service you no longer need to use to avoid charges.
 
-### Architecture
-The architecture of the project is designed to ensure seamless integration and automation of various components, from data ingestion to model deployment and monitoring. The diagram below illustrates the overall architecture:
+## 🎉 Live Streamlit App
 
-![architecture](images/architecture.png)
+You can check out the live version of the Streamlit app at the following URL:
 
+[Streamlit App](https://streamlit-app-brrxtoum2a-uc.a.run.app/)
+
+### 📸 Screenshot of the App
+
+![Streamlit App Screenshot](images/streamlit.png)
 
 ### Exploratory Data Analysis and Modeling 
 
@@ -75,16 +79,20 @@ Before setting up the project, ensure you have completed the following prerequis
 
 #### **Local Setup**
 
-1. **Clone the Repository**:
+#### **Clone the Repository**:
 
    ```bash
    git clone https://github.com/Tobai24/In-Hospital-Mortality-Prediction.git
    cd In-Hospital-Mortality-Prediction
    ```
 
-2. **Set Up the Python Environment**:
+#### **Set Up the Python Environment**:
 
    **Option 1: Using `pipenv`** (Recommended)
+   - Install pipenv
+      ```bash
+      pip install pipenv
+      ```
 
    - Install the dependencies with `pipenv`:
 
@@ -152,26 +160,6 @@ Feel free to explore these folders and read through the instructions. Each READM
 
 A huge thank you to [DataTalks.Club](https://datatalks.club) for offering their MLOps course for free! 🌟 The insights and skills I gained from their course were crucial in developing this project. If you want to enhance your expertise in MLOps, I highly recommend checking out their [course](https://github.com/DataTalksClub/mlops-zoomcamp). It’s an invaluable resource for diving into MLOps technologies! 📚✨
 
-
-
-
-
-# to use the local docker deployment
-```bash
-docker build -t mortality-prediction:v1 .
-docker run -it -p 9696:9696 mortality-prediction:v1
-```
-
-# to check the local streamlit deployment
-```bash
-docker build -t streamlit-app .
-docker run -p 8501:8501 streamlit-app
-```
-
-# to run the the stramlit app from the cloud
-```bash
-streamlit run app.py --server.port 8501 --server.enableCORS false --server.enableXsrfProtection false
-```
 
 
 
