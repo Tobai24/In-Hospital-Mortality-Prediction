@@ -24,7 +24,7 @@ jobs:
 
     - name: Build and Push Docker image
       run: |
-        docker build -t gcr.io/${{ secrets.GCP_PROJECT }}/streamlit-app -f deployment/web-deployment/Dockerfile .
+        docker build -t gcr.io/${{ secrets.GCP_PROJECT }}/streamlit-app -f deployment/web_deployment/Dockerfile .
         docker push gcr.io/${{ secrets.GCP_PROJECT }}/streamlit-app
 
     - name: Deploy to Cloud Run
