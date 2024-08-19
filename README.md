@@ -78,6 +78,28 @@ docker run -p 8501:8501 streamlit-app
 streamlit run app.py --server.port 8501 --server.enableCORS false --server.enableXsrfProtection false
 ```
 
-include other things
 
-trying the deployment again
+
+# Predicting In-Hospital Mortality 🏥
+
+Hello there! 👋 Welcome to my end-to-end machine learning project, where I’m tackling the important task of predicting in-hospital mortality. The goal of this project is to build a reproducible machine learning pipeline, from data preprocessing to model deployment, ensuring you can easily replicate every step on your own machine or cloud environment. 🏗️🚀
+
+## 📝 Problem Description
+
+Hospital readmissions and mortality are pressing challenges in healthcare today. The ability to predict in-hospital mortality can be crucial for better patient management and improving outcomes. 
+
+### Objective
+
+The objective of this project is to develop a machine learning model that can accurately predict the likelihood of a patient’s mortality during their hospital stay. The goal is to provide healthcare professionals with valuable insights that can potentially save lives.
+
+### Dataset
+
+The dataset I used for this project comes from the [PhysioNet Challenge 2012](https://physionet.org/content/challenge-2012/1.0.0/), which provides a rich collection of ICU data for predicting in-hospital mortality. This dataset contains a wide range of physiological measurements and clinical information collected over the first 48 hours of a patient's ICU stay.
+
+- **Number of records**: 1178 ICU stays
+- **Number of features**: 51 columns
+
+The dataset is hosted on PhysioNet and can be downloaded [here](https://physionet.org/content/challenge-2012/1.0.0/). For more detailed information about the dataset, including explanations of the columns, please refer to the [`data/README.md`](data/README.md).
+
+
+
