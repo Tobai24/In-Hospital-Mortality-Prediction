@@ -21,9 +21,6 @@ If you've already set up your virtual environment using the instruction in the s
   pip install -r requirements.txt
   ```
 
-- **Run the Notebook**: 
-  Execute `baseline_model.ipynb` to download datasets, train the model, and create the reference dataset.
-
 ## Monitoring Example
 
 ### Starting Services
@@ -37,6 +34,9 @@ This will start the following services:
 - `db`: PostgreSQL, for storing metrics data
 - `adminer`: A handy tool for managing your database
 - `grafana`: Your visual dashboarding tool
+
+ **Run the Notebook**: 
+  Run `baseline_model.py` to download datasets, train the model, and create the reference dashboard.
 
 ### Sending Data
 
