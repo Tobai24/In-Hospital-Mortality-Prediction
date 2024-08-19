@@ -64,11 +64,12 @@ data = {
 if st.button("🔍 Predict"):
     # Convert the inputs to a DataFrame
     input_df = pd.DataFrame([data])
-
+    
     # Get prediction
     prediction = predict(input_df)
-    result = "Alive" if prediction >= 0.5 else "Dead"
+    result = "deceased" if prediction >= 0.6 else "survive"
 
     # Display the prediction
-    st.subheader("Prediction Result")
+    st.subheader("Mortality Prediction Result")
     st.write(f"The patient is likely to be **{result}**.")
+
